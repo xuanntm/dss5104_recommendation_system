@@ -8,3 +8,5 @@ scikit-surprise
 implicit
 torch
 matplotlib
+seaborn
+scikit-surprise

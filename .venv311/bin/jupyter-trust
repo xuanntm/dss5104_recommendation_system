@@ -1,0 +1,6 @@
+#!/Users/XuanNguyen/Documents/NUS/DSS5104/dss5104_recommendation_system/.venv311/bin/python
+import sys
+from nbformat.sign import TrustNotebookApp
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(TrustNotebookApp.launch_instance())
