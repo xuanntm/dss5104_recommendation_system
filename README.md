@@ -13,7 +13,7 @@ This repository implements and evaluates the following recommendation models:
 | Popularity Baseline | Heuristic | MovieLens 100K, LastFM-2K |
 | SVD (Matrix Factorization) | Classical | MovieLens 100K (explicit) |
 | ALS (Alternating Least Squares) | Classical | LastFM-2K (implicit) |
-| NCF (Neural Collaborative Filtering) | Deep Learning | MovieLens 100K |
+| NCF (Neural Collaborative Filtering) | Deep Learning | MovieLens 100K and LastFM-2K |
 | Two-Tower | Deep Learning | LastFM-2K and MovieLens 100K |
 
 **Evaluation metrics:** `hr@10`, `ndcg@10`, `map@10`.
@@ -117,7 +117,7 @@ jupyter notebook
 |---|---|
 | `01_data_preprocessing.ipynb` | Preprocess raw data, binarize signals, apply k-core filtering, remap IDs, and save train/val/test splits |
 | `02_baseline.ipynb` | Evaluate popularity baseline; train and tune SVD on MovieLens; train and tune ALS on LastFM-2K |
-| `03_ncf.ipynb` | Train and evaluate Neural Collaborative Filtering on MovieLens 100K |
+| `03_ncf.ipynb` | Train and evaluate Neural Collaborative Filtering on MovieLens 100K and LastFM-2K |
 | `04_two_tower.ipynb` | Train and evaluate Two-Tower models on LastFM-2K and compare on MovieLens |
 
 > Each notebook depends on the previous notebook's outputs.
@@ -154,6 +154,7 @@ Saved outputs include:
 - `data/processed/baseline_results.csv`
 - `data/processed/final_results.csv`
 - `data/processed/ncf_movielens.pt`
+- `data/processed/ncf_lastfm.pt`
 - `data/processed/two_tower_lastfm.pt`
 - `data/processed/two_tower_movielens.pt`
 
